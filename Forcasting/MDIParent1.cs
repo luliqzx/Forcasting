@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Forcasting.Repo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -91,6 +92,13 @@ namespace Forcasting
             {
                 childForm.Close();
             }
+        }
+
+        private void btnTestConnection_Click(object sender, EventArgs e)
+        {
+            IOrderHeaderRepo OrderHeaderRepo = new OrderHeaderRepo();
+            if (OrderHeaderRepo.TestConnection())
+                MessageBox.Show("OK");
         }
     }
 }

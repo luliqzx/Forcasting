@@ -7,7 +7,7 @@ namespace Forcasting.Entity
 {
     public class OrderDetail
     {
-        public string OrderID { get; set; }
+        public OrderHeader OrderHeader { get; set; }
         public int Line { get; set; }
         public string Product { get; set; }
         public string ProductName { get; set; }
